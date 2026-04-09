@@ -7,31 +7,34 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://neevan-7.github.io",
+  "https://marvelseatings.vercel.app"
+];
+
 app.use(cors({
-  origin: function (origin, callback) {
+  origin: function(origin, callback) {
+    // allow requests with no origin (mobile apps, curl)
     if (!origin) return callback(null, true);
 
-    const allowed = [
-      "http://localhost:5173",
-      "https://marvelseatings.vercel.app"
-    ];
-
-    // Allow any Vercel preview deployment
-    if (
-      allowed.includes(origin) ||
-      origin.endsWith(".vercel.app")
-    ) {
+    // allow main domains
+    if (allowedOrigins.includes(origin)) {
       return callback(null, true);
     }
 
-    return callback(new Error("Not allowed by CORS"));
+    // allow ALL vercel preview deployments
+    if (origin.endsWith(".vercel.app")) {
+      return callback(null, true);
+    }
+
+    return callback(null, true); // allow all (final safety)
   },
   credentials: true,
   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   allowedHeaders: ["Content-Type","Authorization"]
 }));
-app.options("*", cors());
-
+app.options('*', cors());
 // app.use(cors({
 //    origin: [
 //     "http://localhost:5173",
