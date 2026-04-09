@@ -7,24 +7,29 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-
 app.use(cors({
   origin: function (origin, callback) {
-    const allowedOrigins = [
+    if (!origin) return callback(null, true);
+
+    const allowed = [
       "http://localhost:5173",
       "https://marvelseatings.vercel.app"
     ];
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
+
+    // Allow any Vercel preview deployment
+    if (
+      allowed.includes(origin) ||
+      origin.endsWith(".vercel.app")
+    ) {
+      return callback(null, true);
     }
+
+    return callback(new Error("Not allowed by CORS"));
   },
   credentials: true,
   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   allowedHeaders: ["Content-Type","Authorization"]
 }));
-
 app.options("*", cors());
 
 // app.use(cors({
