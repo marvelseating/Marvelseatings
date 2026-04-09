@@ -10,7 +10,8 @@ const app = express();
 app.use(cors({
    origin: [
     "http://localhost:5173",
-    "https://neevan-7.github.io"
+    "https://neevan-7.github.io",
+    "https://marvelseatings.vercel.app"
   ],
  // origin: process.env.NODE_ENV === 'production' ? 'https://yoursite.com' : 'http://localhost:5173',
   credentials: true
