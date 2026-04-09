@@ -5,35 +5,39 @@ const path = require('path');
 require('dotenv').config();
 
 const app = express();
+app.use(cors({
+  origin: true,   // allow ALL origins (safe for API)
+  credentials: true
+}));
 
 // Middleware
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://neevan-7.github.io",
-  "https://marvelseatings.vercel.app"
-];
+// const allowedOrigins = [
+//   "http://localhost:5173",
+//   "https://neevan-7.github.io",
+//   "https://marvelseatings.vercel.app"
+// ];
 
-app.use(cors({
-  origin: function(origin, callback) {
-    // allow requests with no origin (mobile apps, curl)
-    if (!origin) return callback(null, true);
+// app.use(cors({
+//   origin: function(origin, callback) {
+//     // allow requests with no origin (mobile apps, curl)
+//     if (!origin) return callback(null, true);
 
-    // allow main domains
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
+//     // allow main domains
+//     if (allowedOrigins.includes(origin)) {
+//       return callback(null, true);
+//     }
 
-    // allow ALL vercel preview deployments
-    if (origin.endsWith(".vercel.app")) {
-      return callback(null, true);
-    }
+//     // allow ALL vercel preview deployments
+//     if (origin.endsWith(".vercel.app")) {
+//       return callback(null, true);
+//     }
 
-    return callback(null, true); // allow all (final safety)
-  },
-  credentials: true,
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
-  allowedHeaders: ["Content-Type","Authorization"]
-}));
+//     return callback(null, true); // allow all (final safety)
+//   },
+//   credentials: true,
+//   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+//   allowedHeaders: ["Content-Type","Authorization"]
+// }));
 app.options('*', cors());
 // app.use(cors({
 //    origin: [
