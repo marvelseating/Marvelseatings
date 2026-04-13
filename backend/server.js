@@ -40,13 +40,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
-app.use('/api/products', require('./routes/products'));
-app.use('/api/categories', require('./routes/categories'));
-app.use('/api/price-requests', require('./routes/priceRequests'));
-app.use('/api/works', require('./routes/works'));
-app.use('/api/testimonials', require('./routes/testimonials'));
-app.use('/api/contact', require('./routes/contact'));
-app.use('/api/admin', require('./routes/admin'));
+
+app.use('/api/products', require('./backend/routes/products'));
+app.use('/api/categories', require('./backend/routes/categories'));
+app.use('/api/price-requests', require('./backend/routes/priceRequests'));
+app.use('/api/works', require('./backend/routes/works'));
+app.use('/api/testimonials', require('./backend/routes/testimonials'));
+app.use('/api/contact', require('./backend/routes/contact'));
+app.use('/api/admin', require('./backend/routes/admin'));
+
+// app.use('/api/products', require('./routes/products'));
+// app.use('/api/categories', require('./routes/categories'));
+// app.use('/api/price-requests', require('./routes/priceRequests'));
+// app.use('/api/works', require('./routes/works'));
+// app.use('/api/testimonials', require('./routes/testimonials'));
+// app.use('/api/contact', require('./routes/contact'));
+// app.use('/api/admin', require('./routes/admin'));
 
 // Seed route (for development/testing only)
 // app.get("/api/seed", async (req, res) => {
