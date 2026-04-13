@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
-
 const app = express();
+console.log("🔥 NEW BUILD DEPLOYED 🔥");
 
 // ===== ULTRA STABLE CORS FOR RENDER + VERCEL =====
 const allowedOrigins = [
