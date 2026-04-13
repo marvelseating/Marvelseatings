@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://marvel-seating-backend.onrender.com/api',
+  baseURL: 'https://marvel-seating-backend-jnvu.onrender.com/api',
   //baseURL: '/api',
   timeout: 60000,
 });
