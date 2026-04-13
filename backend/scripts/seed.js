@@ -5,6 +5,7 @@ const { Category, Work, Testimonial, Admin } = require('../models');
 
 const seed = async () => {
   //await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/marvel_seating');
+  await mongoose.connect(process.env.MONGO_URI);
   console.log('Connected to MongoDB');
 
   // Clear existing

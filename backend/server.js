@@ -81,14 +81,34 @@ app.use((err, req, res, next) => {
 });
 
 // Connect DB and start server
+// add these imports at TOP of file
+const seed = require('./scripts/seed');
+const Product = require('./models/Product');
+
+// Connect DB and start server
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/marvel_seating')
-  .then(() => {
+  .then(async () => {
     console.log('✅ MongoDB connected');
-    app.listen(PORT,"0.0.0.0", () => {
+
+    // 🌱 AUTO SEED IN PRODUCTION
+    try {
+      const count = await Product.countDocuments();
+
+      if (count === 0) {
+        console.log('🌱 No products found → Running seed script...');
+        await seed();
+        console.log('🌱 Seeding completed');
+      } else {
+        console.log('📦 Database already contains products');
+      }
+    } catch (err) {
+      console.error('Seed check error:', err);
+    }
+
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`🚀 Server running on port ${PORT}`);
-      //console.log(`🚀 Server running on http://localhost:${PORT}`);
     });
   })
   .catch(err => {
@@ -97,3 +117,21 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/marvel_seat
   });
 
 module.exports = app;
+
+
+// const PORT = process.env.PORT || 5000;
+
+// mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/marvel_seating')
+//   .then(() => {
+//     console.log('✅ MongoDB connected');
+//     app.listen(PORT,"0.0.0.0", () => {
+//       console.log(`🚀 Server running on port ${PORT}`);
+//       //console.log(`🚀 Server running on http://localhost:${PORT}`);
+//     });
+//   })
+//   .catch(err => {
+//     console.error('❌ MongoDB connection failed:', err.message);
+//     process.exit(1);
+//   });
+
+// module.exports = app;
