@@ -49,16 +49,16 @@ app.use('/api/contact', require('./routes/contact'));
 app.use('/api/admin', require('./routes/admin'));
 
 // Seed route (for development/testing only)
-app.get("/api/seed", async (req, res) => {
-  try {
-    const seed = require("./scripts/seed");
-    await seed();
-    res.send("Database seeded!");
-  } catch (err) {
-    console.error(err);
-    res.status(500).send(err.message);
-  }
-});
+// app.get("/api/seed", async (req, res) => {
+//   try {
+//     const seed = require("./scripts/seed");
+//     await seed();
+//     res.send("Database seeded!");
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).send(err.message);
+//   }
+// });
 
 // Health check
 app.get('/api/health', (req, res) => {
