@@ -78,7 +78,7 @@ export default function HomePage() {
             </motion.h1>
             <motion.p variants={fadeUp} initial="hidden" animate="show" custom={2}
               className="mt-6 text-white/70 text-lg leading-relaxed">
-              Marvel Seating System — manufacturer, supplier, and trader of quality office chairs, sofas, and furniture. Trusted by 500+ businesses across Chennai.
+              Marvel Seatings — manufacturer, supplier, and trader of quality office chairs, sofas, and furniture. Trusted by 500+ businesses across Chennai.
             </motion.p>
             <motion.div variants={fadeUp} initial="hidden" animate="show" custom={3}
               className="flex flex-wrap gap-4 mt-8">
@@ -310,7 +310,7 @@ export default function HomePage() {
           <p className="mt-3 text-white/80 text-lg">Get in touch with us for the best pricing on bulk or retail orders.</p>
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <a href="tel:8045801616" className="bg-white text-accent font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-2">
-              <HiPhone /> Call Now: 8045801616
+              <HiPhone /> Call Now: 9941128772
             </a>
             <Link to="/contact" className="border-2 border-white text-white font-bold px-8 py-3 rounded-lg hover:bg-white/10 transition-colors">
               Send Enquiry

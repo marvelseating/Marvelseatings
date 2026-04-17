@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-display font-bold text-lg">M</div>
             <div>
-              <div className="font-display font-bold text-lg leading-tight">Marvel Seating</div>
+              <div className="font-display font-bold text-lg leading-tight">Marvel Seatings</div>
               <div className="text-accent text-xs">System</div>
             </div>
           </div>
@@ -21,7 +21,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-3">
             {[
-              { icon: FaWhatsapp, href: 'https://wa.me/918045801616', label: 'WhatsApp' },
+              { icon: FaWhatsapp, href: 'https://wa.me/919941128772', label: 'WhatsApp' },
               { icon: FaFacebook, href: '#', label: 'Facebook' },
               { icon: FaInstagram, href: '#', label: 'Instagram' },
               { icon: FaLinkedin, href: '#', label: 'LinkedIn' },
@@ -89,13 +89,13 @@ export default function Footer() {
             <li>
               <a href="tel:8045801616" className="flex items-center gap-3 hover:text-accent transition-colors">
                 <HiPhone className="text-accent w-5 h-5" />
-                8045801616
+                9941128772
               </a>
             </li>
             <li>
               <a href="mailto:info@marvelseating.com" className="flex items-center gap-3 hover:text-accent transition-colors">
                 <HiMail className="text-accent w-5 h-5" />
-                info@marvelseating.com
+                marvelseating@gmail.com
               </a>
             </li>
           </ul>
@@ -110,7 +110,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-2 text-xs text-gray-500">
-          <p>© {new Date().getFullYear()} Marvel Seating System. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Marvel Seatings. All rights reserved.</p>
           <p>Manufacturer | Supplier | Trader · Chennai, Tamil Nadu, India</p>
         </div>
       </div>
