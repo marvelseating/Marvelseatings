@@ -50,8 +50,8 @@ export default function ContactPage() {
             <div className="space-y-5">
               {[
                 { icon: HiLocationMarker, label: 'Address', value: 'No 1/638, Veerathamman Koil Street, St. John\'s School Road, Jalladianpet, Chennai - 600100, Tamil Nadu, India' },
-                { icon: HiPhone, label: 'Phone', value: '8045801616', href: 'tel:8045801616' },
-                { icon: HiMail, label: 'Email', value: 'info@marvelseating.com', href: 'mailto:info@marvelseating.com' },
+                { icon: HiPhone, label: 'Phone', value: '9941128772', href: 'tel:8045801616' },
+                { icon: HiMail, label: 'Email', value: 'marvelseating@gmail.com', href: 'mailto:marvelseating@gmail.com' },
                 { icon: HiClock, label: 'Working Hours', value: 'Monday – Saturday: 9:00 AM – 6:00 PM' },
               ].map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className="flex items-start gap-4">
@@ -69,7 +69,7 @@ export default function ContactPage() {
                 </div>
               ))}
 
-              <a href="https://wa.me/918045801616" target="_blank" rel="noreferrer"
+              <a href="https://wa.me/919941128772" target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-xl transition-colors mt-2">
                 <FaWhatsapp className="w-5 h-5" /> Chat on WhatsApp
               </a>
@@ -78,7 +78,7 @@ export default function ContactPage() {
             {/* Map */}
             <div className="mt-8 rounded-2xl overflow-hidden shadow-md h-60 bg-gray-100">
               <iframe
-                title="Marvel Seating Location"
+                title="Marvel Seatings Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5!2d80.2!3d12.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzAwLjAiTiA4MMKwMTInMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
               />

@@ -245,7 +245,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-accent font-semibold text-sm tracking-widest uppercase mb-2">Why Us</p>
-            <h2 className="font-display text-4xl font-bold text-white">Why Clients Choose Marvel Seating</h2>
+            <h2 className="font-display text-4xl font-bold text-white">Why Clients Choose Marvel Seatings</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {reasons.map((r, i) => (

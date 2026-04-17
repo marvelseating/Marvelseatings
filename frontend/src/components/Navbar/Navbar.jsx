@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className={`hidden md:flex items-center justify-end px-8 py-1 text-xs transition-all duration-300 ${scrolled || !isHome ? 'bg-brand text-white' : 'bg-white/10 text-white/80'}`}>
         <a href="tel:8045801616" className="flex items-center gap-1 hover:text-accent transition-colors">
           <HiPhone className="text-accent" />
-          <span>8045801616</span>
+          <span>9941128772</span>
         </a>
         <span className="mx-3 opacity-40">|</span>
         <span>No 1/638, Jalladianpet, Chennai - 600100</span>
@@ -53,7 +53,7 @@ export default function Navbar() {
             </div>
             <div>
               <div className={`font-display font-bold text-lg leading-tight transition-colors ${logoColor}`}>
-                Marvel Seating
+                Marvel Seatings
               </div>
               <div className={`text-xs font-body transition-colors ${scrolled || !isHome ? 'text-accent' : 'text-accent-light'}`}>
                 System
@@ -130,7 +130,7 @@ export default function Navbar() {
               ))}
               <div className="pt-2 border-t border-gray-100 mt-2">
                 <a href="tel:8045801616" className="flex items-center gap-2 px-4 py-3 text-sm text-brand font-medium">
-                  <HiPhone /> 8045801616
+                  <HiPhone /> 9941128772
                 </a>
               </div>
             </nav>

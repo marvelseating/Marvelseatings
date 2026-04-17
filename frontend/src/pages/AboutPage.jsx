@@ -29,7 +29,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        title="About Marvel Seating System"
+        title="About Marvel Seatings"
         subtitle="Your trusted partner for premium furniture and seating solutions in Chennai"
         breadcrumb="Home / About"
       />
@@ -41,7 +41,7 @@ export default function AboutPage() {
             <p className="section-subtitle">Who We Are</p>
             <h2 className="section-title">A Legacy of Quality Since 2006</h2>
             <p className="mt-5 text-gray-600 leading-relaxed">
-              Marvel Seating System is a noteworthy manufacturer, supplier, and trader based in Chennai, Tamil Nadu. We specialize in premium office chairs, lobby sofas, cafe chairs, bar stools, and a wide range of seating solutions for businesses of all scales.
+              Marvel Seatings is a noteworthy manufacturer, supplier, and trader based in Chennai, Tamil Nadu. We specialize in premium office chairs, lobby sofas, cafe chairs, bar stools, and a wide range of seating solutions for businesses of all scales.
             </p>
             <p className="mt-4 text-gray-600 leading-relaxed">
               Founded in 2006 by Mr. Rajesh Kumar, we have grown from a local supplier to a trusted name in the commercial furniture industry, serving clients across Tamil Nadu and Kerala.
